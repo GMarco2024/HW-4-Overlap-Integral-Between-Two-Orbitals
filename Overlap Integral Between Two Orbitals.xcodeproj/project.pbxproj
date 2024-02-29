@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDCF51AD2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51AC2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift */; };
+		EDCF51AF2B9121DC0079FEC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51AE2B9121DC0079FEC5 /* ContentView.swift */; };
+		EDCF51B12B9121DD0079FEC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCF51B02B9121DD0079FEC5 /* Assets.xcassets */; };
+		EDCF51B52B9121DD0079FEC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCF51B42B9121DD0079FEC5 /* Preview Assets.xcassets */; };
+		EDCF51BF2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51BE2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsTests.swift */; };
+		EDCF51C92B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51C82B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITests.swift */; };
+		EDCF51CB2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51CA2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITestsLaunchTests.swift */; };
+		EDCF51D82B9125190079FEC5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51D72B9125190079FEC5 /* ViewModel.swift */; };
+		EDCF51DA2B9125390079FEC5 /* OrbitalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51D92B9125390079FEC5 /* OrbitalCalculator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDCF51BB2B9121DE0079FEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCF51A12B9121DB0079FEC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCF51A82B9121DC0079FEC5;
+			remoteInfo = "Overlap Integral Between Two Orbitals";
+		};
+		EDCF51C52B9121DE0079FEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCF51A12B9121DB0079FEC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCF51A82B9121DC0079FEC5;
+			remoteInfo = "Overlap Integral Between Two Orbitals";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDCF51A92B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overlap Integral Between Two Orbitals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCF51AC2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap_Integral_Between_Two_OrbitalsApp.swift; sourceTree = "<group>"; };
+		EDCF51AE2B9121DC0079FEC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDCF51B02B9121DD0079FEC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDCF51B22B9121DD0079FEC5 /* Overlap_Integral_Between_Two_Orbitals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Overlap_Integral_Between_Two_Orbitals.entitlements; sourceTree = "<group>"; };
+		EDCF51B42B9121DD0079FEC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDCF51BA2B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Overlap Integral Between Two OrbitalsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCF51BE2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap_Integral_Between_Two_OrbitalsTests.swift; sourceTree = "<group>"; };
+		EDCF51C42B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Overlap Integral Between Two OrbitalsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCF51C82B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap_Integral_Between_Two_OrbitalsUITests.swift; sourceTree = "<group>"; };
+		EDCF51CA2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap_Integral_Between_Two_OrbitalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDCF51D72B9125190079FEC5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EDCF51D92B9125390079FEC5 /* OrbitalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalCalculator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDCF51A62B9121DC0079FEC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCF51B72B9121DE0079FEC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCF51C12B9121DE0079FEC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDCF51A02B9121DB0079FEC5 = {
+			isa = PBXGroup;
+			children = (
+				EDCF51AB2B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals */,
+				EDCF51BD2B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests */,
+				EDCF51C72B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests */,
+				EDCF51AA2B9121DC0079FEC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDCF51AA2B9121DC0079FEC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDCF51A92B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals.app */,
+				EDCF51BA2B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests.xctest */,
+				EDCF51C42B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDCF51AB2B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals */ = {
+			isa = PBXGroup;
+			children = (
+				EDCF51AC2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift */,
+				EDCF51AE2B9121DC0079FEC5 /* ContentView.swift */,
+				EDCF51D92B9125390079FEC5 /* OrbitalCalculator.swift */,
+				EDCF51D72B9125190079FEC5 /* ViewModel.swift */,
+				EDCF51B02B9121DD0079FEC5 /* Assets.xcassets */,
+				EDCF51B22B9121DD0079FEC5 /* Overlap_Integral_Between_Two_Orbitals.entitlements */,
+				EDCF51B32B9121DD0079FEC5 /* Preview Content */,
+			);
+			path = "Overlap Integral Between Two Orbitals";
+			sourceTree = "<group>";
+		};
+		EDCF51B32B9121DD0079FEC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDCF51B42B9121DD0079FEC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDCF51BD2B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCF51BE2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsTests.swift */,
+			);
+			path = "Overlap Integral Between Two OrbitalsTests";
+			sourceTree = "<group>";
+		};
+		EDCF51C72B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCF51C82B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITests.swift */,
+				EDCF51CA2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITestsLaunchTests.swift */,
+			);
+			path = "Overlap Integral Between Two OrbitalsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDCF51A82B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCF51CE2B9121DE0079FEC5 /* Build configuration list for PBXNativeTarget "Overlap Integral Between Two Orbitals" */;
+			buildPhases = (
+				EDCF51A52B9121DC0079FEC5 /* Sources */,
+				EDCF51A62B9121DC0079FEC5 /* Frameworks */,
+				EDCF51A72B9121DC0079FEC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Overlap Integral Between Two Orbitals";
+			productName = "Overlap Integral Between Two Orbitals";
+			productReference = EDCF51A92B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDCF51B92B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCF51D12B9121DE0079FEC5 /* Build configuration list for PBXNativeTarget "Overlap Integral Between Two OrbitalsTests" */;
+			buildPhases = (
+				EDCF51B62B9121DE0079FEC5 /* Sources */,
+				EDCF51B72B9121DE0079FEC5 /* Frameworks */,
+				EDCF51B82B9121DE0079FEC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCF51BC2B9121DE0079FEC5 /* PBXTargetDependency */,
+			);
+			name = "Overlap Integral Between Two OrbitalsTests";
+			productName = "Overlap Integral Between Two OrbitalsTests";
+			productReference = EDCF51BA2B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDCF51C32B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCF51D42B9121DE0079FEC5 /* Build configuration list for PBXNativeTarget "Overlap Integral Between Two OrbitalsUITests" */;
+			buildPhases = (
+				EDCF51C02B9121DE0079FEC5 /* Sources */,
+				EDCF51C12B9121DE0079FEC5 /* Frameworks */,
+				EDCF51C22B9121DE0079FEC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCF51C62B9121DE0079FEC5 /* PBXTargetDependency */,
+			);
+			name = "Overlap Integral Between Two OrbitalsUITests";
+			productName = "Overlap Integral Between Two OrbitalsUITests";
+			productReference = EDCF51C42B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDCF51A12B9121DB0079FEC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					EDCF51A82B9121DC0079FEC5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					EDCF51B92B9121DE0079FEC5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = EDCF51A82B9121DC0079FEC5;
+					};
+					EDCF51C32B9121DE0079FEC5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = EDCF51A82B9121DC0079FEC5;
+					};
+				};
+			};
+			buildConfigurationList = EDCF51A42B9121DB0079FEC5 /* Build configuration list for PBXProject "Overlap Integral Between Two Orbitals" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDCF51A02B9121DB0079FEC5;
+			productRefGroup = EDCF51AA2B9121DC0079FEC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDCF51A82B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals */,
+				EDCF51B92B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsTests */,
+				EDCF51C32B9121DE0079FEC5 /* Overlap Integral Between Two OrbitalsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDCF51A72B9121DC0079FEC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCF51B52B9121DD0079FEC5 /* Preview Assets.xcassets in Resources */,
+				EDCF51B12B9121DD0079FEC5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCF51B82B9121DE0079FEC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCF51C22B9121DE0079FEC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDCF51A52B9121DC0079FEC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCF51AF2B9121DC0079FEC5 /* ContentView.swift in Sources */,
+				EDCF51DA2B9125390079FEC5 /* OrbitalCalculator.swift in Sources */,
+				EDCF51D82B9125190079FEC5 /* ViewModel.swift in Sources */,
+				EDCF51AD2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCF51B62B9121DE0079FEC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCF51BF2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCF51C02B9121DE0079FEC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCF51CB2B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITestsLaunchTests.swift in Sources */,
+				EDCF51C92B9121DE0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDCF51BC2B9121DE0079FEC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCF51A82B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals */;
+			targetProxy = EDCF51BB2B9121DE0079FEC5 /* PBXContainerItemProxy */;
+		};
+		EDCF51C62B9121DE0079FEC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCF51A82B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals */;
+			targetProxy = EDCF51C52B9121DE0079FEC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDCF51CC2B9121DE0079FEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDCF51CD2B9121DE0079FEC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EDCF51CF2B9121DE0079FEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Overlap Integral Between Two Orbitals/Overlap_Integral_Between_Two_Orbitals.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Overlap Integral Between Two Orbitals/Preview Content\"";
+				DEVELOPMENT_TEAM = 75J3K8B84J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Overlap-Integral-Between-Two-Orbitals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDCF51D02B9121DE0079FEC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Overlap Integral Between Two Orbitals/Overlap_Integral_Between_Two_Orbitals.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Overlap Integral Between Two Orbitals/Preview Content\"";
+				DEVELOPMENT_TEAM = 75J3K8B84J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Overlap-Integral-Between-Two-Orbitals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDCF51D22B9121DE0079FEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75J3K8B84J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Overlap-Integral-Between-Two-OrbitalsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Overlap Integral Between Two Orbitals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Overlap Integral Between Two Orbitals";
+			};
+			name = Debug;
+		};
+		EDCF51D32B9121DE0079FEC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75J3K8B84J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Overlap-Integral-Between-Two-OrbitalsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Overlap Integral Between Two Orbitals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Overlap Integral Between Two Orbitals";
+			};
+			name = Release;
+		};
+		EDCF51D52B9121DE0079FEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75J3K8B84J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Overlap-Integral-Between-Two-OrbitalsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Overlap Integral Between Two Orbitals";
+			};
+			name = Debug;
+		};
+		EDCF51D62B9121DE0079FEC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75J3K8B84J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Overlap-Integral-Between-Two-OrbitalsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Overlap Integral Between Two Orbitals";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDCF51A42B9121DB0079FEC5 /* Build configuration list for PBXProject "Overlap Integral Between Two Orbitals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCF51CC2B9121DE0079FEC5 /* Debug */,
+				EDCF51CD2B9121DE0079FEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCF51CE2B9121DE0079FEC5 /* Build configuration list for PBXNativeTarget "Overlap Integral Between Two Orbitals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCF51CF2B9121DE0079FEC5 /* Debug */,
+				EDCF51D02B9121DE0079FEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCF51D12B9121DE0079FEC5 /* Build configuration list for PBXNativeTarget "Overlap Integral Between Two OrbitalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCF51D22B9121DE0079FEC5 /* Debug */,
+				EDCF51D32B9121DE0079FEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCF51D42B9121DE0079FEC5 /* Build configuration list for PBXNativeTarget "Overlap Integral Between Two OrbitalsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCF51D52B9121DE0079FEC5 /* Debug */,
+				EDCF51D62B9121DE0079FEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDCF51A12B9121DB0079FEC5 /* Project object */;
+}
