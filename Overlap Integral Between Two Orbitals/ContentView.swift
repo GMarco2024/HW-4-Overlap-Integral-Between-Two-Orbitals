@@ -18,97 +18,100 @@ struct ContentView: View {
     @State private var ZMinString: String = ""
     
     var body: some View {
-        VStack {
-            
-            Text("HW 4 Part 1 - Overlapping Integral of Orbitals")
-                .underline(true, color: .black)
-                .font(.system(size: 20))
-            
-            Text("We define the Bounding Box in 3D")
-                .font(.headline)
-                .fontWeight(.regular)
-                .padding()
         
-            HStack(spacing: 20) {
-                TextField("Enter Xmax", text: $XMaxString)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 200)
+        ScrollView{
+            VStack {
+                
+                Text("HW 4 Part 1 - Overlapping Integral of Orbitals")
+                    .underline(true, color: .black)
+                    .font(.system(size: 20))
+                
+                Text("We define the Bounding Box in 3D")
+                    .font(.headline)
+                    .fontWeight(.regular)
                     .padding()
                 
-                TextField("Enter Xmin", text: $XMinString)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 200)
-                    .padding()
-                
-            }
-            
-            HStack(spacing: 20) {
-                TextField("Enter Ymax", text: $YMaxString)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .frame(maxWidth: 200)
-                            
-                TextField("Enter Ymin", text: $YMinString)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .frame(maxWidth: 200)
-                        }
-            
-            HStack(spacing: 20) {
-                
-                TextField("Enter Zmax", text: $ZMaxString)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 200)
-                    .padding()
-                
-                TextField("Enter Xmin", text: $ZMinString)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 200)
-                    .padding()
-                
-            }
-                
-            Text("We calculate the Interatomic Spacing R")
-                .font(.headline)
-                .fontWeight(.regular)
-                .padding()
-            
-            
-            Text("Enter Interatomic Spacing R")
-                .font(.headline)
-                .fontWeight(.regular)
-            
-            TextField("Enter interatomic spacing (R)", value: $viewModel.interatomicSpacing, format: .number)
-                .frame(maxWidth: 350)
-                .padding()
-            
-            Text("Enter number of Guesses")
-                .font(.headline)
-                .fontWeight(.regular)
-            
-            
-            TextField("Number of Guesses", value: $viewModel.numberOfGuesses, format: .number)
-                .padding()
-            
-            Button("Calculate") {
-                            viewModel.calculateOverlapIntegral()
-                        }
+                HStack(spacing: 20) {
+                    TextField("Enter Xmax", text: $XMaxString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 200)
                         .padding()
-                        
-                        if let result = viewModel.result {
-                            Text("Direct Calculation Result: \(result, specifier: "%.5f")")
-                                .padding()
-                        }
-                        
-                        if let monteCarloResult = viewModel.monteCarloResult {
-                            Text("Monte Carlo Result: \(monteCarloResult, specifier: "%.5f")")
-                                .padding()
-                        }
-                    }
+                    
+                    TextField("Enter Xmin", text: $XMinString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 200)
+                        .padding()
+                    
+                }
+                
+                HStack(spacing: 54) {
+                    TextField("Enter Ymax", text: $YMaxString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 200)
+                    
+                    TextField("Enter Ymin", text: $YMinString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 200)
+                }
+                
+                HStack(spacing: 20) {
+                    
+                    TextField("Enter Zmax", text: $ZMaxString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 200)
+                        .padding()
+                    
+                    TextField("Enter Xmin", text: $ZMinString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 200)
+                        .padding()
+                    
+                }
+                
+                Text("We calculate the Interatomic Spacing R")
+                    .font(.headline)
+                    .fontWeight(.regular)
                     .padding()
+                
+                
+                Text("Enter Interatomic Spacing R")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                
+                TextField("Enter interatomic spacing (R)", value: $viewModel.interatomicSpacing, format: .number)
+                    .frame(maxWidth: 350)
+                    .padding()
+                
+                Text("Enter number of Guesses")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                
+                
+                TextField("Number of Guesses", value: $viewModel.numberOfGuesses, format: .number)
+                    .padding()
+                
+                Button("Calculate") {
+                    viewModel.calculateOverlapIntegral()
+                }
+                .padding()
+                
+                if let result = viewModel.result {
+                    Text("Direct Calculation Result: \(result, specifier: "%.5f")")
+                        .padding()
+                }
+                
+                if let monteCarloResult = viewModel.monteCarloResult {
+                    Text("Monte Carlo Result: \(monteCarloResult, specifier: "%.5f")")
+                        .padding()
                 }
             }
-
-            struct ContentView_Previews: PreviewProvider {
-                static var previews: some View {
-                    ContentView()
-                }
-            }
+            .padding()
+        }
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+}
