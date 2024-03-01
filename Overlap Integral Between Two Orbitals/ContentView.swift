@@ -28,37 +28,44 @@ struct ContentView: View {
                 .font(.headline)
                 .fontWeight(.regular)
                 .padding()
+        
+            HStack(spacing: 20) {
+                TextField("Enter Xmax", text: $XMaxString)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(maxWidth: 200)
+                    .padding()
+                
+                TextField("Enter Xmin", text: $XMinString)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(maxWidth: 200)
+                    .padding()
+                
+            }
             
-            TextField("Enter Xmax", text: $XMaxString)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(maxWidth: 200)
-                .padding()
+            HStack(spacing: 20) {
+                TextField("Enter Ymax", text: $YMaxString)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .frame(maxWidth: 200)
+                            
+                TextField("Enter Ymin", text: $YMinString)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .frame(maxWidth: 200)
+                        }
             
-            TextField("Enter Xmin", text: $XMinString)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(maxWidth: 200)
-                .padding()
-            
-            TextField("Enter Ymax", text: $YMaxString)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(maxWidth: 200)
-                .padding()
-            
-            TextField("Enter Ymin", text: $YMinString)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(maxWidth: 200)
-                .padding()
-            
-            TextField("Enter Zmax", text: $ZMaxString)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(maxWidth: 200)
-                .padding()
-            
-            TextField("Enter Xmin", text: $ZMinString)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(maxWidth: 200)
-                .padding()
-            
+            HStack(spacing: 20) {
+                
+                TextField("Enter Zmax", text: $ZMaxString)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(maxWidth: 200)
+                    .padding()
+                
+                TextField("Enter Xmin", text: $ZMinString)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(maxWidth: 200)
+                    .padding()
+                
+            }
+                
             Text("We calculate the Interatomic Spacing R")
                 .font(.headline)
                 .fontWeight(.regular)
