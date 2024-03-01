@@ -31,9 +31,15 @@ class MonteCarlo {
         for _ in 0..<numberOfGuesses {
             let randomPoint = boundingBox.generateRandomPoint()
             sum += function(randomPoint)
+            
         }
         
         let averageValue = sum / Double(numberOfGuesses)
-        return averageValue * boundingBox.volume
+        let result = averageValue * boundingBox.volume
+        
+        // Correctly placed print statement
+        print("Final Monte Carlo Integration result: \(result)")
+        
+        return result
     }
 }

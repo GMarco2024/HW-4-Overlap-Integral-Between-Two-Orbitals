@@ -10,6 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
+    @State private var XMaxString: String = ""
+    @State private var XMinString: String = ""
+    @State private var YMaxString: String = ""
+    @State private var YMinString: String = ""
+    @State private var ZMaxString: String = ""
+    @State private var ZMinString: String = ""
+    
     var body: some View {
         VStack {
             
@@ -17,17 +24,47 @@ struct ContentView: View {
                 .underline(true, color: .black)
                 .font(.system(size: 20))
             
+            Text("We define the Bounding Box in 3D")
+                .font(.headline)
+                .fontWeight(.regular)
+                .padding()
+            
+            TextField("Enter Xmax", text: $XMaxString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: 200)
+                .padding()
+            
+            TextField("Enter Xmin", text: $XMinString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: 200)
+                .padding()
+            
+            TextField("Enter Ymax", text: $YMaxString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: 200)
+                .padding()
+            
+            TextField("Enter Ymin", text: $YMinString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: 200)
+                .padding()
+            
+            TextField("Enter Zmax", text: $ZMaxString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: 200)
+                .padding()
+            
+            TextField("Enter Xmin", text: $ZMinString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: 200)
+                .padding()
+            
             Text("We calculate the Interatomic Spacing R")
                 .font(.headline)
                 .fontWeight(.regular)
-  
-      //comment this out to add image of Equation we are working with
+                .padding()
             
-      //      Image("Overlap Integral Between Two 1s Orbitals")
-      //          .resizable()
-      //          .aspectRatio(contentMode: .fit)
-      //          .frame(width: 200, height: 200)
-      
+            
             Text("Enter Interatomic Spacing R")
                 .font(.headline)
                 .fontWeight(.regular)
@@ -39,6 +76,7 @@ struct ContentView: View {
             Text("Enter number of Guesses")
                 .font(.headline)
                 .fontWeight(.regular)
+            
             
             TextField("Number of Guesses", value: $viewModel.numberOfGuesses, format: .number)
                 .padding()
