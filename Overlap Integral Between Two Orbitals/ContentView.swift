@@ -29,9 +29,17 @@ struct ContentView: View {
                 Text("We define the Bounding Box in 3D")
                     .font(.headline)
                     .fontWeight(.regular)
-                    .padding()
+                    
+                Spacer()
+                Spacer()
                 
-                HStack(spacing: 20) {
+                Text("Xmax, Xmin")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .underline(true, color: .black)
+                
+                HStack(spacing: 10) {
+    
                     TextField("Enter Xmax", text: $XMaxString)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 200)
@@ -44,7 +52,12 @@ struct ContentView: View {
                     
                 }
                 
-                HStack(spacing: 54) {
+                Text("Ymax, Ymin")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .underline(true, color: .black)
+                
+                HStack(spacing: 26) {
                     TextField("Enter Ymax", text: $YMaxString)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 200)
@@ -52,9 +65,19 @@ struct ContentView: View {
                     TextField("Enter Ymin", text: $YMinString)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 200)
+                        .padding()
                 }
                 
-                HStack(spacing: 20) {
+             
+                
+                Text("Zmax, Zmin")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .underline(true, color: .black)
+                
+                Spacer()
+                
+                HStack(spacing: 10) {
                     
                     TextField("Enter Zmax", text: $ZMaxString)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
