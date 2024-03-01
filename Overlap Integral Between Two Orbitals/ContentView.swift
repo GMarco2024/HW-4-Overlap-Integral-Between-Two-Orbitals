@@ -20,8 +20,14 @@ struct ContentView: View {
             Text("We calculate the Interatomic Spacing R")
                 .font(.headline)
                 .fontWeight(.regular)
-                
-
+  
+      //comment this out to add image of Equation we are working with
+            
+      //      Image("Overlap Integral Between Two 1s Orbitals")
+      //          .resizable()
+      //          .aspectRatio(contentMode: .fit)
+      //          .frame(width: 200, height: 200)
+      
             Text("Enter Interatomic Spacing R")
                 .font(.headline)
                 .fontWeight(.regular)
@@ -30,10 +36,13 @@ struct ContentView: View {
                 .frame(maxWidth: 350)
                 .padding()
             
+            Text("Enter number of Guesses")
+                .font(.headline)
+                .fontWeight(.regular)
+            
             TextField("Number of Guesses", value: $viewModel.numberOfGuesses, format: .number)
-             // To ensure only numbers are inputted
                 .padding()
-
+            
             Button("Calculate") {
                             viewModel.calculateOverlapIntegral()
                         }
