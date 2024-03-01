@@ -28,7 +28,10 @@ class ViewModel: ObservableObject {
         
         // Monte Carlo Calculation
         let monteCarlo = MonteCarlo(boundingBox: boundingBox, function: { point in
-            // Example function, adjust according to your actual calculation needs
+            
+            
+    // Example function, adjust according to your actual calculation needs
+            
             return exp(-sqrt(point[0]*point[0] + point[1]*point[1] + point[2]*point[2]))
         }, numberOfGuesses: guesses)
         

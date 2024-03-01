@@ -4,13 +4,10 @@
 //
 //  Created by PHYS 440 Marco on 3/1/24.
 //
-// \Psi_{1,0,0} = \left(\frac{1}{\sqrt{\pi}}\right) \left(\frac{Z}{a}\right)^{\frac{3}{2}} e^{-\frac{Zr}{a}}
-
 //
 
-import Foundation
 
-
+//                1s Orbital
 //
 //                                  3/2
 //                /  1   \       /Z\       -Zr/a
@@ -19,4 +16,16 @@ import Foundation
 //                \ |/pi /
 //
 
+import Foundation
 
+struct OneSOrbital {
+    let Z: Double // Atomic number. We have yet to modify this.
+    let a: Double // Bohr radius. Yeah I guess.
+    
+    func calculateWavefunction(r: Double) -> Double {
+        let normalizationFactor = 1.0 / sqrt(Double.pi)
+        let exponent = -Z * r / a
+        let radialPart = pow(Z / a, 1.5)
+        return normalizationFactor * radialPart * exp(exponent)
+    }
+}
