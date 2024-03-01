@@ -37,7 +37,7 @@ class MonteCarlo {
         let averageValue = sum / Double(numberOfGuesses)
         let result = averageValue * boundingBox.volume
         
-        // Correctly placed print statement
+     
         print("Final Monte Carlo Integration result: \(result)")
         
         return result

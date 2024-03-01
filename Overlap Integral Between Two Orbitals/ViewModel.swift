@@ -1,55 +1,40 @@
 import Foundation
-import Combine
 
 class ViewModel: ObservableObject {
-    @Published var interatomicSpacing: Double?
-    @Published var numberOfGuesses: Int = 10000
-    @Published var result: Double?
-    @Published var monteCarloResult: Double?
-
-    // New published properties for the 3D bounding box inputs
-    @Published var xMax: Double = 0.0
-    @Published var xMin: Double = 0.0
-    @Published var yMax: Double = 0.0
-    @Published var yMin: Double = 0.0
-    @Published var zMax: Double = 0.0
-    @Published var zMin: Double = 0.0
-
+    // Input properties
+    @Published var xMaxString: String = ""
+    @Published var xMinString: String = ""
+    @Published var yMaxString: String = ""
+    @Published var yMinString: String = ""
+    @Published var zMaxString: String = ""
+    @Published var zMinString: String = ""
+    @Published var interatomicSpacing: String = ""
+    @Published var numberOfGuesses: String = ""
+    
+    // Output properties
+    @Published var monteCarloResult: Double = 0
+    @Published var analyticalResult: Double = 0
+    
     func calculateOverlapIntegral() {
-        guard let spacing = interatomicSpacing else {
-            print("Interatomic spacing is not provided or invalid.")
+        guard let xMax = Double(xMaxString), let xMin = Double(xMinString),
+              let yMax = Double(yMaxString), let yMin = Double(yMinString),
+              let zMax = Double(zMaxString), let zMin = Double(zMinString),
+              let R = Double(interatomicSpacing), let guesses = Int(numberOfGuesses) else {
             return
         }
         
-        // Direct calculation
-        let overlapIntegral = OrbitalCalculator.calculateOverlapIntegral(spacing: spacing)
-        DispatchQueue.main.async {
-            self.result = overlapIntegral
-        }
-        
-        // Prepare for Monte Carlo integration with updated 3D bounding box parameters
-        calculateMonteCarloIntegration()
-    }
-    
-    private func calculateMonteCarloIntegration() {
-        // Initialize the bounding box with the provided 3D inputs
+        // Setup BoundingBox
         let boundingBox = BoundingBox(xMin: xMin, xMax: xMax, yMin: yMin, yMax: yMax, zMin: zMin, zMax: zMax)
         
-        // Define the function for Monte Carlo integration. Modify as necessary for your specific use case.
-        let functionToIntegrate: ([Double]) -> Double = { point in
-            // This is a placeholder function. Replace with your actual function to integrate.
-            // Example: return OrbitalCalculator.calculateOverlapIntegral(spacing: point.first ?? 0.0)
-            return 1.0 // Placeholder return value
-        }
+        // Monte Carlo Calculation
+        let monteCarlo = MonteCarlo(boundingBox: boundingBox, function: { point in
+            // Example function, adjust according to your actual calculation needs
+            return exp(-sqrt(point[0]*point[0] + point[1]*point[1] + point[2]*point[2]))
+        }, numberOfGuesses: guesses)
         
-        // Setup Monte Carlo integration with the new bounding box
-        let monteCarlo = MonteCarlo(boundingBox: boundingBox, function: functionToIntegrate, numberOfGuesses: numberOfGuesses)
+        self.monteCarloResult = monteCarlo.integrate()
         
-        // Perform Monte Carlo integration
-        let integralResult = monteCarlo.integrate()
-        
-        DispatchQueue.main.async {
-            self.monteCarloResult = integralResult
-        }
+        // Analytical Calculation
+        self.analyticalResult = OrbitalCalculator.calculateOverlapIntegral(spacing: R)
     }
 }
