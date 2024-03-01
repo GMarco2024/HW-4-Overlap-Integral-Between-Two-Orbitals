@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = ViewModel() // Initialize the ViewModel
+    @StateObject private var viewModel = ViewModel()
 
     var body: some View {
         ScrollView {
@@ -69,6 +69,16 @@ struct ContentView: View {
                         .padding()
                 }
                 
+                
+                Text("Enter number of Guesses")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                
+                TextField("Number of Guesses", text: $viewModel.numberOfGuesses)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(maxWidth: 350)
+                    .padding()
+                
                 Text("We calculate the Interatomic Spacing R")
                     .font(.headline)
                     .fontWeight(.regular)
@@ -83,20 +93,11 @@ struct ContentView: View {
                     .frame(maxWidth: 350)
                     .padding()
                 
-                Text("Enter number of Guesses")
-                    .font(.headline)
-                    .fontWeight(.regular)
-                
-                TextField("Number of Guesses", text: $viewModel.numberOfGuesses)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 350)
-                    .padding()
+               
                 
                 Button("Calculate") {
                     viewModel.calculateOverlapIntegral()
-                    
                 }
-                
                 
                 // Display the results
                 
@@ -107,6 +108,9 @@ struct ContentView: View {
                     .padding()
                 
             }
+        
+            
+              
             .padding()
         }
     }
