@@ -20,7 +20,7 @@ struct ContentView: View {
             Text("We calculate the Interatomic Spacing R")
                 .font(.headline)
                 .fontWeight(.regular)
-                .padding()
+                
 
             Text("Enter Interatomic Spacing R")
                 .font(.headline)
@@ -30,16 +30,31 @@ struct ContentView: View {
                 .frame(maxWidth: 350)
                 .padding()
             
+            TextField("Number of Guesses", value: $viewModel.numberOfGuesses, format: .number)
+             // To ensure only numbers are inputted
+                .padding()
+
             Button("Calculate") {
                             viewModel.calculateOverlapIntegral()
-            
-            }
+                        }
                         .padding()
+                        
                         if let result = viewModel.result {
-                            Text("Overlap Integral: \(result)")
+                            Text("Direct Calculation Result: \(result, specifier: "%.5f")")
+                                .padding()
+                        }
+                        
+                        if let monteCarloResult = viewModel.monteCarloResult {
+                            Text("Monte Carlo Result: \(monteCarloResult, specifier: "%.5f")")
                                 .padding()
                         }
                     }
                     .padding()
+                }
+            }
+
+            struct ContentView_Previews: PreviewProvider {
+                static var previews: some View {
+                    ContentView()
                 }
             }
