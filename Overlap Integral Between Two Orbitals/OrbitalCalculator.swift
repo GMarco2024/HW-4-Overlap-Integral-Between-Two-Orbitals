@@ -32,15 +32,16 @@ struct OrbitalCalculator {
         
         let Rmeters = R * pow(10, -10)
         
-        // Calculate the exponential part of the formula, representing the exponential decay of overlap with distance
+        // This calculates the exponential part of the formula, representing the exponential decay of overlap with distance
         
         let exponentPart = exp(-Rmeters / a0)
         
-        // Calculate the polynomial part of the formula, adjusting the exponential decay with a linear and quadratic term to more accurately reflect orbital overlap
+        // This calculates the polynomial part of the formula, adjusting the exponential decay with a linear and quadratic term to more accurately reflect orbital overlap
         
         let polynomialPart = 1 + (Rmeters / a0) + (pow(Rmeters, 2) / (3 * pow(a0, 2)))
         
-        // Calculate the total overlap integral by multiplying the exponential and polynomial parts
+        // Calculates the total overlap integral by multiplying the exponential and polynomial parts
+        
         let overlapIntegral = exponentPart * polynomialPart
         
         return overlapIntegral
