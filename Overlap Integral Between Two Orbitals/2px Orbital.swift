@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+
+//                                    5
+//                                    -
+//                   1       /Z\      2
+//   Psi       =   ------    |-|         re^-Zr/2a    sin(theta) cos(phi)
+//      2,1,1       ____     \a/
+//                 /32pi
+//
+
+
+
