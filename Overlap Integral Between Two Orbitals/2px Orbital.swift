@@ -1,12 +1,12 @@
 //
-//  File.swift
+//  2PXOrbital.swift.swift
 //  Overlap Integral Between Two Orbitals
 //
 //  Created by PHYS 440 Marco on 3/1/24.
 //
 
 
-//                           2px Orbital
+//                           2px Orbital Wavefuntion
 //
 //                                    5
 //                                    -
@@ -16,18 +16,21 @@
 //                 /32pi
 //
 
+
 import Foundation
 
 struct TwoPXOrbital {
-    let Z: Double // Atomic number. We have yet to change this.
-    let a: Double // Bohr radius. Yeah this too.
+    
+    // Atomic number for hydrogen
+    let Z: Double = 1.0
+    
+    // Bohr radius in angstroms
+    let a: Double = 0.5292
     
     func calculateWavefunction(r: Double, theta: Double, phi: Double) -> Double {
-        let normalizationFactor = 1.0 / sqrt(32 * Double.pi)
-        let radialPart = pow(Z / a, 2.5) * r * exp(-Z * r / (2 * a))
+        let normalizationFactor = sqrt(4.0 * Z.pow(5) / (32.0 * Double.pi * a.pow(5)))
+        let radialPart = r * exp(-Z * r / (2 * a))
         let angularPart = sin(theta) * cos(phi)
         return normalizationFactor * radialPart * angularPart
     }
 }
-
-
