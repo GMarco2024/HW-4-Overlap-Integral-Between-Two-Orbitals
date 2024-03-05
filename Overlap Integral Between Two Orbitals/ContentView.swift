@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-
+    
+    @State private var orbitalSelect1 = "1s"
+        @State private var orbitalSelect2 = "1s"
+        let orbitalChoices = ["1s", "2px"]
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -76,6 +80,26 @@ struct ContentView: View {
                         .padding()
                 }
                 
+                Text("Orbitals")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .padding()
+
+                Picker("Pick orbital 1:", selection: $orbitalSelect1) {
+                                    ForEach(orbitalChoices, id: \.self) {
+                                        Text($0)
+                                    }
+                                }
+                .pickerStyle(.segmented)
+                                .padding()
+                                
+                                Picker("Pick orbital 2:", selection: $orbitalSelect2) {
+                                    ForEach(orbitalChoices, id: \.self) {
+                                        Text($0)
+                                    }
+                                }
+                                .pickerStyle(.segmented)
+                                                .padding()
                 
                 Text("Enter number of Guesses")
                     .font(.headline)
@@ -84,11 +108,6 @@ struct ContentView: View {
                 TextField("Number of Guesses", text: $viewModel.numberOfGuesses)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(maxWidth: 350)
-                    .padding()
-                
-                Text("We calculate the Interatomic Spacing R")
-                    .font(.headline)
-                    .fontWeight(.regular)
                     .padding()
                 
                 Text("Enter Interatomic Spacing R")
