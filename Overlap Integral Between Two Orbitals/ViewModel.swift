@@ -34,7 +34,7 @@ class ViewModel: ObservableObject {
         let boundingBox = BoundingBox(xMin: xMin, xMax: xMax, yMin: yMin, yMax: yMax, zMin: zMin, zMax: zMax)
 
         // Monte Carlo Calculation
-        let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses)
+        let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses, interatomicSpacing: R)
         self.monteCarloResult = monteCarlo.integrate()
 
         // Analytical Calculation

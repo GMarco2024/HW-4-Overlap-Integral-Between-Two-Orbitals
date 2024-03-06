@@ -2,7 +2,7 @@
 //  OneSOrbital.swift
 //  Overlap Integral Between Two Orbitals
 //
-//  Created by Marco on [Your Creation Date Here].
+//  Created by Marco on 2/29/2024.
 //
 
 import Foundation
