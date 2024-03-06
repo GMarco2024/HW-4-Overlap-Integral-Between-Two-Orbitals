@@ -9,14 +9,14 @@ import Foundation
 
 class ViewModel: ObservableObject {
     // Input properties
-    @Published var xMaxString: String = ""
-    @Published var xMinString: String = ""
-    @Published var yMaxString: String = ""
-    @Published var yMinString: String = ""
-    @Published var zMaxString: String = ""
-    @Published var zMinString: String = ""
+    @Published var xMaxString: String = "10"
+    @Published var xMinString: String = "-10"
+    @Published var yMaxString: String = "10"
+    @Published var yMinString: String = "-10"
+    @Published var zMaxString: String = "10"
+    @Published var zMinString: String = "-10"
     @Published var interatomicSpacing: String = ""
-    @Published var numberOfGuesses: String = ""
+    @Published var numberOfGuesses: String = "1000"
 
     // Output properties
     @Published var monteCarloResult: Double = 0
