@@ -4,15 +4,23 @@
 //
 //  Created by Marco on 3/4/24.
 //
+//
+//  BoundingBox.swift
+//  Overlap Integral Between Two Orbitals
+//
+//  Created by Marco on 3/4/24.
+//
 
 import Foundation
 
 class BoundingBox {
-    
-    var lowerRange: [Double]
-    var upperRange: [Double]
-    var volume: Double
-    
+    var xMin: Double
+    var xMax: Double
+    var yMin: Double
+    var yMax: Double
+    var zMin: Double
+    var zMax: Double
+
     /// Initializes the bounding box with specific minimum and maximum values for each dimension.
     /// - Parameters:
     ///   - xMin: The minimum value in the X dimension.
@@ -22,29 +30,25 @@ class BoundingBox {
     ///   - zMin: The minimum value in the Z dimension.
     ///   - zMax: The maximum value in the Z dimension.
     init(xMin: Double, xMax: Double, yMin: Double, yMax: Double, zMin: Double, zMax: Double) {
-        self.lowerRange = [xMin, yMin, zMin]
-        self.upperRange = [xMax, yMax, zMax]
-        self.volume = BoundingBox.calculateVolume(lowerRange: self.lowerRange, upperRange: self.upperRange)
+        self.xMin = xMin
+        self.xMax = xMax
+        self.yMin = yMin
+        self.yMax = yMax
+        self.zMin = zMin
+        self.zMax = zMax
     }
-    
-    /// Calculates the volume of the bounding box based on the lower and upper ranges.
-    /// - Returns: The volume of the bounding box.
-    private static func calculateVolume(lowerRange: [Double], upperRange: [Double]) -> Double {
-        guard lowerRange.count == 3, upperRange.count == 3 else {
-            print("The limits did not match the expected number of dimensions (3).")
-            return 0.0
-        }
-        
-        return zip(lowerRange, upperRange).reduce(1.0) { result, bounds in
-            result * (bounds.1 - bounds.0)
-        }
+
+    /// Calculates the volume of the bounding box.
+    var volume: Double {
+        return (xMax - xMin) * (yMax - yMin) * (zMax - zMin)
     }
-    
-    /// Generates a random point within the 3D bounding box.
+
+    /// Generates a random point within the bounding box in 3D space.
     /// - Returns: An array of Double representing a random point within the bounding box.
     func generateRandomPoint() -> [Double] {
-        return lowerRange.indices.map { i in
-            Double.random(in: lowerRange[i]...upperRange[i])
-        }
+        let xPoint = Double.random(in: xMin...xMax)
+        let yPoint = Double.random(in: yMin...yMax)
+        let zPoint = Double.random(in: zMin...zMax)
+        return [xPoint, yPoint, zPoint]
     }
 }
