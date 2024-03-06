@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		902F072B2B925A1F0040EA95 /* 2px Orbital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F072A2B925A1F0040EA95 /* 2px Orbital.swift */; };
+		ED69A2472B9814F8006D1795 /* OneSOrbital.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69A2462B9814F8006D1795 /* OneSOrbital.swift */; };
 		EDCF51AD2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51AC2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift */; };
 		EDCF51AF2B9121DC0079FEC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF51AE2B9121DC0079FEC5 /* ContentView.swift */; };
 		EDCF51B12B9121DD0079FEC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCF51B02B9121DD0079FEC5 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		902F072A2B925A1F0040EA95 /* 2px Orbital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2px Orbital.swift"; sourceTree = "<group>"; };
+		ED69A2462B9814F8006D1795 /* OneSOrbital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSOrbital.swift; sourceTree = "<group>"; };
 		EDCF51A92B9121DC0079FEC5 /* Overlap Integral Between Two Orbitals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overlap Integral Between Two Orbitals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCF51AC2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap_Integral_Between_Two_OrbitalsApp.swift; sourceTree = "<group>"; };
 		EDCF51AE2B9121DC0079FEC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				EDCF51D72B9125190079FEC5 /* ViewModel.swift */,
 				EDCF51DF2B9188360079FEC5 /* Boundingbox.swift */,
 				EDCF51E12B9189520079FEC5 /* MonteCarlo.swift */,
+				ED69A2462B9814F8006D1795 /* OneSOrbital.swift */,
 				EDF5C4B82B96981800DED544 /* Extentsion.swift */,
 				902F072A2B925A1F0040EA95 /* 2px Orbital.swift */,
 				EDCF51B02B9121DD0079FEC5 /* Assets.xcassets */,
@@ -282,6 +285,7 @@
 				EDCF51E02B9188360079FEC5 /* Boundingbox.swift in Sources */,
 				EDCF51E22B9189520079FEC5 /* MonteCarlo.swift in Sources */,
 				902F072B2B925A1F0040EA95 /* 2px Orbital.swift in Sources */,
+				ED69A2472B9814F8006D1795 /* OneSOrbital.swift in Sources */,
 				EDCF51D82B9125190079FEC5 /* ViewModel.swift in Sources */,
 				EDF5C4B92B96981800DED544 /* Extentsion.swift in Sources */,
 				EDCF51AD2B9121DC0079FEC5 /* Overlap_Integral_Between_Two_OrbitalsApp.swift in Sources */,
