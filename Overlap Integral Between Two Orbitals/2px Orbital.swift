@@ -26,7 +26,7 @@ struct TwoPxOrbital {
     // Bohr radius in angstroms
     let a: Double = 0.5292
 
-    // Converts Cartesian coordinates to spherical (r, theta, phi) because, well, the 2px orbital is in obvious regards to spherical coordinates.
+    // Converts Cartesian coordinates to spherical (r, theta, phi) because, well, the 2px orbital is, well, in regards to spherical coordinates.
     
     func cartesianToSpherical(x: Double, y: Double, z: Double) -> (r: Double, theta: Double, phi: Double) {
         let r = sqrt(x*x + y*y + z*z)
