@@ -18,8 +18,8 @@ class ViewModel: ObservableObject {
     @Published var interatomicSpacing: String = ""
     @Published var numberOfGuesses: String = "1000"
     
-    @Published var selectedOrbitalTypeA: String = "1s"
-        @Published var selectedOrbitalTypeB: String = "1s"
+    @Published var selectedOrbital1s: String = "1s"
+        @Published var selectedOrbital2px: String = "1s"
         let orbitalTypes = ["1s", "2px"]
     
 
@@ -33,6 +33,7 @@ class ViewModel: ObservableObject {
             let zMax = Double(zMaxString), let zMin = Double(zMinString),
             let R = Double(interatomicSpacing), let guesses = Int(numberOfGuesses) else {
                 return
+            
         }
 
         // Setup BoundingBox

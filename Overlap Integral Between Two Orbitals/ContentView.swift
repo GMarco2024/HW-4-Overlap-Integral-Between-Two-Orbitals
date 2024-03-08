@@ -32,6 +32,7 @@ struct ContentView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 200)
                         .padding()
+                    
                 }
                 
                 Text("Ymax, Ymin")
@@ -48,6 +49,7 @@ struct ContentView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 200)
                         .padding()
+                    
                 }
                 
                 Text("Zmax, Zmin")
@@ -71,7 +73,7 @@ struct ContentView: View {
                 
                 Text("Select Orbitals")
                     .font(.headline)
-                Picker("Orbital 1", selection: $viewModel.selectedOrbitalTypeA) {
+                Picker("Orbital 1", selection: $viewModel.selectedOrbital1s) {
                     ForEach(viewModel.orbitalTypes, id: \.self) { type in
                         Text(type).tag(type)
                     }
@@ -80,7 +82,7 @@ struct ContentView: View {
                 .padding()
                 
                 
-                Picker("Orbital 2", selection: $viewModel.selectedOrbitalTypeB) {
+                Picker("Orbital 2", selection: $viewModel.selectedOrbital2px) {
                     ForEach(viewModel.orbitalTypes, id: \.self) { type in
                         Text(type).tag(type)
                     }
