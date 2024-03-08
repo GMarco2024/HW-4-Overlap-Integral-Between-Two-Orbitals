@@ -73,7 +73,7 @@ struct ContentView: View {
                 
                 Text("Select Orbitals")
                     .font(.headline)
-                Picker("Orbital 1", selection: $viewModel.selectedOrbital1s) {
+                Picker("Orbital 1", selection: $viewModel.selectedOrbitalTypeA) {
                     ForEach(viewModel.orbitalTypes, id: \.self) { type in
                         Text(type).tag(type)
                     }

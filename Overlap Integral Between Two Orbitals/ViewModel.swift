@@ -18,7 +18,7 @@ class ViewModel: ObservableObject {
     @Published var interatomicSpacing: String = ""
     @Published var numberOfGuesses: String = "1000"
     
-    @Published var selectedOrbital1s: String = "1s"
+    @Published var selectedOrbitalTypeA: String = "1s"
         @Published var selectedOrbital2px: String = "1s"
         let orbitalTypes = ["1s", "2px"]
     
