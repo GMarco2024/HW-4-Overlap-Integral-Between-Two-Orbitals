@@ -17,8 +17,6 @@ class MonteCarlo {
     func integrate() -> Double {
         var sum: Double = 0.0
         
-// Generate a random point within the bounding box.
-        
         for _ in 0..<numberOfGuesses {
             let randomPoint = boundingBox.generateRandomPoint()
             

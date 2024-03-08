@@ -69,9 +69,9 @@ struct ContentView: View {
                         .padding()
                 }
                 
-                Text("Select Orbital Type A")
+                Text("Select Orbitals")
                     .font(.headline)
-                Picker("Orbital Type A", selection: $viewModel.selectedOrbitalTypeA) {
+                Picker("Orbital 1", selection: $viewModel.selectedOrbitalTypeA) {
                     ForEach(viewModel.orbitalTypes, id: \.self) { type in
                         Text(type).tag(type)
                     }
@@ -79,9 +79,8 @@ struct ContentView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
                 
-                Text("Select Orbital Type B")
-                    .font(.headline)
-                Picker("Orbital Type B", selection: $viewModel.selectedOrbitalTypeB) {
+                
+                Picker("Orbital 2", selection: $viewModel.selectedOrbitalTypeB) {
                     ForEach(viewModel.orbitalTypes, id: \.self) { type in
                         Text(type).tag(type)
                     }
