@@ -35,16 +35,18 @@ class ViewModel: ObservableObject {
                 return
             
         }
+                
+                // Reset results to default
+                self.monteCarloResult = 0.0  // Set to 0.0 because we are not performing Monte Carlo for other combinations or showing previous results
+                self.analyticalResult = 0.0  // Resetting analytical result as well
 
-        // Setup BoundingBox
-        let boundingBox = BoundingBox(xMin: xMin, xMax: xMax, yMin: yMin, yMax: yMax, zMin: zMin, zMax: zMax)
-
-        // Monte Carlo Calculation
-        let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses, interatomicSpacing: R)
-        self.monteCarloResult = monteCarlo.integrate()
-
-        // Analytical Calculation
-        self.analyticalResult = OrbitalCalculator.calculateOverlapIntegral(spacing: R)
-    }
-}
+                // Check if both selected orbitals are "1s"
+                if selectedOrbitalTypeA == "1s" && selectedOrbitalTypeB == "1s" {
+                    // Analytical Calculation only for 1s & 1s
+                    self.analyticalResult = OrbitalCalculator.calculateOverlapIntegral(spacing: R)
+                } else {
+                 
+                }
+            }
+        }
 
