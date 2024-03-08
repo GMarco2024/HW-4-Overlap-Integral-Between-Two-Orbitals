@@ -8,6 +8,6 @@ Latex Equations
 
 \Psi_{2,1,1} = \frac{1}{\sqrt{32\pi}} \left(\frac{Z}{a}\right)^{\frac{5}{2}} r e^{-\frac{Zr}{2a}} \sin\theta \cos\phi
 
-WaveFuntion between two orbitals
+Integral between two orbitals
 
 \[\int dr\, \psi^*_+ \psi_+ = \int dr\, (1s^*_A + 1s^*_B)(1s_A + 1s_B) \]
