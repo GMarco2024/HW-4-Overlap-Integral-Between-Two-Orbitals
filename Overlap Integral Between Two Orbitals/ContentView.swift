@@ -1,17 +1,7 @@
-//
-//  ContentView.swift
-//  Overlap Integral Between Two Orbitals
-//
-//  Created by Marcos on 3/4/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-    
-  
-    
     
     var body: some View {
         ScrollView {
@@ -79,7 +69,25 @@ struct ContentView: View {
                         .padding()
                 }
                 
-              
+                Text("Select Orbital Type A")
+                    .font(.headline)
+                Picker("Orbital Type A", selection: $viewModel.selectedOrbitalTypeA) {
+                    ForEach(viewModel.orbitalTypes, id: \.self) { type in
+                        Text(type).tag(type)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
+                
+                Text("Select Orbital Type B")
+                    .font(.headline)
+                Picker("Orbital Type B", selection: $viewModel.selectedOrbitalTypeB) {
+                    ForEach(viewModel.orbitalTypes, id: \.self) { type in
+                        Text(type).tag(type)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
                 
                 Text("Enter number of Guesses")
                     .font(.headline)
@@ -99,24 +107,18 @@ struct ContentView: View {
                     .frame(maxWidth: 350)
                     .padding()
                 
-               
-                
                 Button("Calculate") {
                     viewModel.calculateOverlapIntegral()
                 }
+                .padding()
                 
                 // Display the results
-                
                 Text("Analytical Result: \(viewModel.analyticalResult)")
                     .padding()
                 
                 Text("Monte Carlo Result: \(viewModel.monteCarloResult)")
                     .padding()
-                
             }
-        
-            
-              
             .padding()
         }
     }

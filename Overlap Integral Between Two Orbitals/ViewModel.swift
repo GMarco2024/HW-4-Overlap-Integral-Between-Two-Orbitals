@@ -17,6 +17,11 @@ class ViewModel: ObservableObject {
     @Published var zMinString: String = "-10"
     @Published var interatomicSpacing: String = ""
     @Published var numberOfGuesses: String = "1000"
+    
+    @Published var selectedOrbitalTypeA: String = "1s"
+        @Published var selectedOrbitalTypeB: String = "1s"
+        let orbitalTypes = ["1s", "2px"]
+    
 
     // Output properties
     @Published var monteCarloResult: Double = 0

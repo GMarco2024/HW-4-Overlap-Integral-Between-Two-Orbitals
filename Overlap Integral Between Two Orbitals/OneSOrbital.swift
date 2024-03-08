@@ -18,7 +18,9 @@
 import Foundation
 
 // 1s Orbital Wavefunction
+
 struct OneSOrbital {
+    
     // Atomic number for hydrogen
     let Z: Double = 1.0
 
