@@ -31,26 +31,23 @@ class ViewModel: ObservableObject {
         self.monteCarloResult = 0.0
         self.analyticalResult = 0.0
 
-        // Check for 1s & 1s orbital overlap calculation
+        // Calculate for 1s & 1s overlap
         if selectedOrbitalTypeA == "1s" && selectedOrbitalTypeB == "1s" {
-            // Perform analytical calculation for 1s & 1s
             self.analyticalResult = OrbitalCalculator.calculateOverlapIntegral(spacing: R)
         }
-        
-        // Check for 2px & 2px orbital overlap calculation
+        // Calculate for 2px & 2px overlap
         else if selectedOrbitalTypeA == "2px" && selectedOrbitalTypeB == "2px" {
-          
-
             let boundingBox = BoundingBox(xMin: xMin, xMax: xMax, yMin: yMin, yMax: yMax, zMin: zMin, zMax: zMax)
-            
-            
             let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses, interatomicSpacing: R)
-            
-           // DON'T DELETE. This will be used in th far future.
-        self.monteCarloResult = monteCarlo.integrateFor2px()
-            
-        } else {
-            // For combinations other than 1s & 1s or 2px & 2px.
+            self.monteCarloResult = monteCarlo.integrateFor2px()
+        }
+        // Calculate for 1s & 2px overlap
+        else if (selectedOrbitalTypeA == "1s" && selectedOrbitalTypeB == "2px") || (selectedOrbitalTypeA == "2px" && selectedOrbitalTypeB == "1s") {
+            let boundingBox = BoundingBox(xMin: xMin, xMax: xMax, yMin: yMin, yMax: yMax, zMin: zMin, zMax: zMax)
+            let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses, interatomicSpacing: R)
+            self.monteCarloResult = monteCarlo.integrateFor1s2px()
+        }
+        else {
             print("Selected orbital combination calculation is not supported yet.")
         }
     }

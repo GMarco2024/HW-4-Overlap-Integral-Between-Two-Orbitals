@@ -36,7 +36,7 @@ class MonteCarlo {
         return result
     }
     
-    // New function for 2px & 2px orbitals
+    // Performs the Monte Carlo integration to approximate the overlap integral for 2px & 2px orbitals.
     func integrateFor2px() -> Double {
         var sum: Double = 0.0
         
@@ -58,6 +58,29 @@ class MonteCarlo {
         let result = averageValue * boundingBox.volume
         
         print("Final Monte Carlo Integration result for 2px & 2px: \(result)")
+        return result
+    }
+
+    // New function for 1s & 2px orbitals
+    func integrateFor1s2px() -> Double {
+        var sum: Double = 0.0
+        
+        for _ in 0..<numberOfGuesses {
+            let randomPoint = boundingBox.generateRandomPoint()
+            
+            // Since the function needs to handle both 1s & 2px combinations, we need to calculate both values
+            let orbitalValue1 = OneSOrbital().calculateWavefunction(r: distance(from: randomPoint, to: [0, 0, 0]))
+            let orbitalValue2 = TwoPxOrbital().calculateWavefunction(x: randomPoint[0] - interatomicSpacing, y: randomPoint[1], z: randomPoint[2])
+
+            // Multiply the orbital values to approximate the overlap at this point
+            sum += orbitalValue1 * orbitalValue2
+        }
+        
+        // Calculate the average value by dividing the sum by the number of guesses and multiply by the bounding box volume
+        let averageValue = sum / Double(numberOfGuesses)
+        let result = averageValue * boundingBox.volume
+        
+        print("Final Monte Carlo Integration result for 1s & 2px: \(result)")
         return result
     }
 
