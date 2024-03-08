@@ -37,7 +37,6 @@ class MonteCarlo {
         
         print("Final Monte Carlo Integration result: \(result)")
                 return result
-
     
     }
     
