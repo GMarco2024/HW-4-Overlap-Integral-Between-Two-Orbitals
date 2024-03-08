@@ -5,6 +5,16 @@
 //  Created by Marco on 2/29/2024.
 //
 
+
+//                1s Orbital
+//
+//                                  3/2
+//                /  1   \       /Z\       -Zr/a
+//   Psi       =  | ----  |      |-|     e
+//      1,0,0     |   __  |      \a/
+//                \ |/pi /
+//
+
 import Foundation
 
 // 1s Orbital Wavefunction
