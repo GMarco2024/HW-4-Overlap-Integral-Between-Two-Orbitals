@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
     @Published var numberOfGuesses: String = "1000"
     
     @Published var selectedOrbitalTypeA: String = "1s"
-        @Published var selectedOrbital2px: String = "1s"
+        @Published var selectedOrbitalTypeB: String = "1s"
         let orbitalTypes = ["1s", "2px"]
     
 
