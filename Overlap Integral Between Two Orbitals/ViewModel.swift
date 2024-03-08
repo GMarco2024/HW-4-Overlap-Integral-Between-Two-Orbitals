@@ -41,14 +41,13 @@ class ViewModel: ObservableObject {
         else if selectedOrbitalTypeA == "2px" && selectedOrbitalTypeB == "2px" {
           
 
-
             let boundingBox = BoundingBox(xMin: xMin, xMax: xMax, yMin: yMin, yMax: yMax, zMin: zMin, zMax: zMax)
             
             
-       //     let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses, interatomicSpacing: R)
+            let monteCarlo = MonteCarlo(boundingBox: boundingBox, numberOfGuesses: guesses, interatomicSpacing: R)
             
            // DON'T DELETE. This will be used in th far future.
-     //   self.monteCarloResult = monteCarlo.integrateFor2px()
+        self.monteCarloResult = monteCarlo.integrateFor2px()
             
         } else {
             // For combinations other than 1s & 1s or 2px & 2px.
